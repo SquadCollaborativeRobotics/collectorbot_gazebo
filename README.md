@@ -7,13 +7,14 @@ To run the simulation, make sure to have this repo and collectorbot_description 
 
 After all the code is where it needs to be (this and collectorbot_description under catkin, hokuyo in the gazebo model database), run:
 
-roslaunch collectorbot_gazebo collectorbot.launch
+`roslaunch collectorbot_gazebo collectorbot.launch`
 
 This will start gazebo with whatever the world file in collectorbot_gazebo/worlds/collectorbot.world is.
 
 Next, in a new terminal, you'll need to spawn the robot using a rosrun command:
 
-rosrun gazebo_ros spawn_model -file `rospack find collectorbot_description`/urdf/collectorbot.sdf -sdf -x 0 -y 0 -z .5 -model collectorbot
+```rosrun gazebo_ros spawn_model -file `rospack find collectorbot_description`/urdf/collectorbot.sdf ```
+```-sdf -x 0 -y 0 -z .5 -model collectorbot```
 
 You can see http://gazebosim.org/wiki/Tutorials/1.9/Using_roslaunch_Files_to_Spawn_Models for more info on spawning models and such.
 
