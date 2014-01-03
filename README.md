@@ -3,7 +3,7 @@ collectorbot_gazebo
 
 Contains world, launch, and other files for launching collectorbot simulation with gazebo
 
-To run the simulation, make sure to have this repo and collectorbot_description under your catkin workspace. You'll also need to copy the hokuyo folder from inside the collectorbot_description folder to the /home/<user>/.gazebo/models folder, as I modified it to use the ROS plugin as opposed to the default gazebo plugin.  I would recommend using a symlink between the folders (I did this graphically using nautilus, right click the hokuyo folder, make link, and then cut and paste it into the .gazebo/models directory and rename to hokuyo).
+To run the simulation, make sure to have this repo and collectorbot_description under your catkin workspace. You'll also need to copy the hokuyo folder from inside the collectorbot_description folder to the ~/.gazebo/models folder, as I modified it to use the ROS plugin as opposed to the default gazebo plugin.  I would recommend using a symlink between the folders (I did this graphically using nautilus, right click the hokuyo folder, make link, and then cut and paste it into the .gazebo/models directory and rename to hokuyo).
 
 After all the code is where it needs to be (this and collectorbot_description under catkin, hokuyo in the gazebo model database), run:
 
