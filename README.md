@@ -18,4 +18,4 @@ Next, in a new terminal, you'll need to spawn the robot using a rosrun command:
 
 You can see http://gazebosim.org/wiki/Tutorials/1.9/Using_roslaunch_Files_to_Spawn_Models for more info on spawning models and such.
 
-After that, you should be good to go with the model in the world.  As of 1/3/2014, the model can listen to the /cmd_vel topic and move accordingly, so by publishing to it you can move the robot in gazebo.  It also spits out hokuyo laser data to the /scan topic.  You'll need to run a static transform between the robot and the laser frame though however, which is what I am currently working on.
+After that, you should be good to go with the model in the world.  As of 1/3/2014, the model can listen to the /cmd_vel topic and move accordingly, so by publishing to it you can move the robot in gazebo. It also spits out hokuyo laser data to the /scan topic. I have also implemented a static transform in the launch file so that the laser data appears in the correct frame. So all should be ready for testing mapping/navigating code, though I haven't done any of it yet. 
