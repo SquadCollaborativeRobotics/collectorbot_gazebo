@@ -5,7 +5,7 @@ TrajectoryPlannerROS:
   min_vel_x: 0.05
   max_vel_x: 0.4
   max_rotational_vel: 1.74 # rad/sec
-  min_in_place_rotational_vel: 0.2 #The minimum rotational velocity allowed for the base while performing in-place rotations in radians/sec
+  min_in_place_rotational_vel: 0.2 # The minimum rotational velocity allowed for the base while performing in-place rotations in radians/sec
 
   acc_lim_th: 2.2
   acc_lim_x: 2.0
