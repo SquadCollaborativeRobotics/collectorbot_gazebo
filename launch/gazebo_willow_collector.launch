@@ -1,16 +1,22 @@
 <launch>
+  <!-- <param name="/use_sim_time" value="true" /> -->
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch"> -->
+    <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+    <!-- <arg name="world_name" value="worlds/willowgarage.world"/> -->
+    <!-- <arg name="paused" value="false"/> -->
+    <!-- <arg name="use_sim_time" value="true"/> -->
+    <!-- <arg name="gui" value="true"/> -->
+    <!-- <arg name="headless" value="false"/> -->
+    <!-- <arg name="debug" value="false"/> -->
+  <!-- </include> -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="worlds/willowgarage.world"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
-    <arg name="paused" value="false"/>
-    <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="true"/>
-    <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>
+   <arg name="world_name" value="$(find collectorbot_gazebo)/launch/willow_collector.world"/>
+   <!-- <arg name="use_sim_time" value="true"/> -->
   </include>
 
   <!-- Spawn a collector robot into Gazebo -->
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find collectorbot_description)/urdf/collectorbot.sdf -sdf -z 0.5 -model collectorbot" />
+  <!-- <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find collectorbot_description)/urdf/collectorbot.sdf -sdf -z 0.5 -model collectorbot" /> -->
 
 </launch>
