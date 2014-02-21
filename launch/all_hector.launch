@@ -10,31 +10,28 @@
   <!-- <node pkg="gazebo_ros" type="spawn_model" name= "gazebo_thing" args="-file `rospack find collectorbot_description`/urdf/collectorbot.sdf -sdf -x 0 -y 0 -z .5 -model collectorbot" /> -->
 
   <!-- Static tf transform between robot frame and laser frame for viewing in rviz -->
-  <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.2413 0 0 0 0 0 robot_center base_link 30" />
-  
-  <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="-0.2413 0 0 0 0 0 base_link robot_center 30" /> -->
-  <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 robot_center hokuyo_frame 30" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.2413 0 0 0 0 0 robot_center base_link 30" /> -->
   <!-- <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 base_link hokuyo_frame 30" /> -->
-  <!-- <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 robot_center hokuyo_frame 30" /> -->
-  <!-- <node pkg="tf" type="static_transform_publisher" name="thing" args="0 0 0 0 0 0 map odom 30" /> -->
+  <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args="0 0 .2 0 0 0 base_link hokuyo_frame 30" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 base_link hokuyo_frame 30" /> -->
 
-  <!-- <node pkg="tf" type="static_transform_publisher" name="scanmatcher_odom_broadcaster" args="0 0 0 0 0 0 odom map 100"/>  -->
-  <!-- <node pkg="tf" type="static_transform_publisher" name="scanmatcher_baselink_broadcaster" args="0 0 0 0 0 0 scanmatcher_frame base_link 100"/> -->
+  <node pkg="tf" type="static_transform_publisher" name="scanmatcher_odom_broadcaster" args="0 0 0 0 0 0 map odom 100"/> 
+  <!-- <node pkg="tf" type="static_transform_publisher" name="scanmatcher_baselink_broadcaster" args="0 0 0 0 0 0 base_link scanmatch_odom 100"/> -->
 
   <!-- poseupdate to odom_combined -->
   <!-- <node pkg="scr_proto" type="pose_to_odom" name="pose_to_odom" /> -->
 
   <!-- Run the map server -->
   <!-- Room + others -->
-  <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/willow_hector_1.yaml"/> 
+  <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/willow_hector_1.yaml"/>  -->
   <!-- Only the room-->
   <!-- <node name="map_server" pkg="map_server" type="map_server" args="/home/sam/maps/map.yaml"/> -->
 
   <!-- - Run Hector Mapping  -->
-  <!-- <include file="$(find collectorbot_gazebo)/launch/hector.launch"/> -->
+  <include file="$(find collectorbot_gazebo)/launch/hector.launch"/>
 
   <!-- - Run AMCL  -->
-  <include file="$(find collectorbot_gazebo)/launch/amcl.launch"/>
+  <!-- <include file="$(find collectorbot_gazebo)/launch/amcl.launch"/> -->
 
   <!-- Move Base Handles interactions between Nav Stack and Robot Hardware -->
   <!-- <include file="$(find collectorbot_gazebo)/launch/move_base.launch"/> -->
