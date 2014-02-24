@@ -11,7 +11,7 @@
 
   <!-- Static tf transform between robot frame and laser frame for viewing in rviz -->
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.2413 0 0 0 0 0 robot_center base_link 30" />
-  
+
   <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="-0.2413 0 0 0 0 0 base_link robot_center 30" /> -->
   <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 robot_center hokuyo_frame 30" />
   <!-- <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 base_link hokuyo_frame 30" /> -->
@@ -34,7 +34,9 @@
   <!-- <include file="$(find collectorbot_gazebo)/launch/hector.launch"/> -->
 
   <!-- - Run AMCL  -->
-  <include file="$(find collectorbot_gazebo)/launch/amcl.launch"/>
+  <include file="$(find collectorbot_gazebo)/launch/amcl_with_args.launch">
+    <arg name="odom_frame_id_arg" value="cbot1/odom" />
+  </include>
 
   <!-- Move Base Handles interactions between Nav Stack and Robot Hardware -->
   <!-- <include file="$(find collectorbot_gazebo)/launch/move_base.launch"/> -->
