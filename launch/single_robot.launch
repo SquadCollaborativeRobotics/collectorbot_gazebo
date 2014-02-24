@@ -18,10 +18,7 @@
     <!-- Static tf transform between robot center to the hokuyo laser -->
     <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/hokuyo_frame 30" />
 
-    <!-- - Run AMCL  -->
-    <include file="$(find collectorbot_gazebo)/launch/amcl_with_args.launch">
-      <!-- <arg name="odom_frame_id_arg" value="robot1/odom" /> -->
-    </include>
+    
 
   </group>
 

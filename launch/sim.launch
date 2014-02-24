@@ -5,6 +5,11 @@
   <node name="gazebo" pkg="gazebo_ros" type="gazebo" 
    args="$(find collectorbot_gazebo)/worlds/springdemo.world" respawn="false" output="screen" />
 
+
+  <!-- Run the map server -->
+  <!-- Room + others -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/willow_hector_1.yaml"/> 
+
   <!-- start gui -->
   <!-- <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> -->
 

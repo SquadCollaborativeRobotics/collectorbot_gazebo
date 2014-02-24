@@ -5,7 +5,7 @@
   <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/willow_hector_1.yaml"/> 
 
   <!-- BEGIN ROBOT 1-->
-  <!-- <group ns="robot1"> -->
+  <group ns="robot1">
     <param name="tf_prefix" value="robot1_tf" />
     
     <!-- - Run AMCL  -->
@@ -21,6 +21,6 @@
     <!-- Move Base Handles interactions between Nav Stack and Robot Hardware -->
     <!-- <include file="$(find collectorbot_gazebo)/launch/move_base.launch"/> -->
 
-  <!-- </group> -->
+  </group>
 
 </launch>
