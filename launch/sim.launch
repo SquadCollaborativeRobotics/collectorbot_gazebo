@@ -9,7 +9,7 @@
   <!-- Run the map server -->
   <!-- Room + others -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/willow_hector_1.yaml">
-    <!-- <param name="frame_id" value="/map" /> -->
+    <param name="frame_id" value="/map" />
   </node> 
 
   <!-- start gui -->
