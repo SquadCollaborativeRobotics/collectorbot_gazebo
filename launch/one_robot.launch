@@ -6,8 +6,8 @@
         args="$(arg init_pose) -file $(find collectorbot_description)/urdf/collectorbot.sdf -sdf -model $(arg robot_name)" 
         respawn="false" output="screen" />
 
-    <node pkg="robot_state_publisher" type="robot_state_publisher" 
-          name="robot_state_publisher" output="screen"/>
+    <!-- <node pkg="robot_state_publisher" type="robot_state_publisher"  -->
+          <!-- name="robot_state_publisher" output="screen"/> -->
 
     <!-- The odometry estimator, throttling, fake laser etc. go here -->
     <!-- All the stuff as from usual robot launch file -->
