@@ -1,0 +1,26 @@
+<launch>
+
+  <!-- Run the map server -->
+  <!-- Room + others -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/willow_hector_1.yaml"/> 
+
+  <!-- BEGIN ROBOT 1-->
+  <!-- <group ns="robot1"> -->
+    <param name="tf_prefix" value="robot1_tf" />
+    
+    <!-- - Run AMCL  -->
+    <node pkg="amcl" type="amcl" name="amcl" output="screen">
+      <!-- Almost all of the commented out values have the default value of what's shown -->
+      <!-- http://wiki.ros.org/amcl -->
+      <param name="odom_frame_id" value="$(tf_prefix)/odom"/>
+      <param name="odom_model_type" value="diff"/>
+      <!-- <param name="use_map_topic" value="true"/> -->
+    </node>
+
+
+    <!-- Move Base Handles interactions between Nav Stack and Robot Hardware -->
+    <!-- <include file="$(find collectorbot_gazebo)/launch/move_base.launch"/> -->
+
+  <!-- </group> -->
+
+</launch>

@@ -1,0 +1,39 @@
+<launch>
+  <!-- No namespace here as we will share this description. 
+       Access with slash at the beginning -->
+  <param name="robot_description"
+    command="$(find xacro)/xacro.py $(find collectorbot_description)/urdf/collectorbot.xacro" />
+
+  <!-- BEGIN ROBOT 1-->
+  <group ns="robot1">
+    <param name="tf_prefix" value="robot1_tf" />
+    <include file="$(find collectorbot_gazebo)/launch/one_robot.launch" >
+      <arg name="init_pose" value="-x 1 -y 1 -z 0.5" />
+      <arg name="robot_name"  value="Robot1" />
+    </include>
+
+    <arg name="tf_prefix" value="robot1_tf" />
+    <!-- Static tf transform between robot center to base link -->
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.2413 0 0 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/base_link 30" />
+    <!-- Static tf transform between robot center to the hokuyo laser -->
+    <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/hokuyo_frame 30" />
+
+  </group>
+
+  <!-- BEGIN ROBOT 2-->
+  <group ns="robot2">
+    <param name="tf_prefix" value="robot2_tf" />
+
+    <include file="$(find collectorbot_gazebo)/launch/one_robot.launch" >
+      <arg name="init_pose" value="-x -0.5 -y 1 -z 0.5" />
+      <arg name="robot_name"  value="Robot2" />
+    </include>
+
+    <arg name="tf_prefix" value="robot2_tf" />
+    <!-- Static tf transform between robot center to base link -->
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.2413 0 0 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/base_link 30" />
+    <!-- Static tf transform between robot center to the hokuyo laser -->
+    <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/hokuyo_frame 30" />
+
+  </group>
+</launch>
