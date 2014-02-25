@@ -1,4 +1,4 @@
-image: /home/sam/maps/willow_hector_1.pgm
+image: willow_hector_1.pgm
 resolution: 0.025000
 origin: [-12.812500, -12.812500, 0.000000]
 negate: 0
