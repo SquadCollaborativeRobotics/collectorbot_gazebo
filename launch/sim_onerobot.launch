@@ -8,6 +8,10 @@
   <!-- start gui -->
   <!-- <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> -->
 
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/springdemo.yaml">
+    <!-- <param name="frame_id" value="/map" /> -->
+  </node> 
+
   <!-- include our robots -->
   <include file="$(find collectorbot_gazebo)/launch/single_robot.launch"/>
 
