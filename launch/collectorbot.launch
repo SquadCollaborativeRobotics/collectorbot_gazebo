@@ -1,9 +1,0 @@
-<launch>
-  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find collectorbot_gazebo)/worlds/collectorbot.world"/>
-    <!-- more default parameters can be changed here -->
-  </include>
-  <!-- Static tf transform between robot frame and laser frame for viewing in rviz -->
-  <node pkg="tf" type="static_transform_publisher" name="hokuyo_trasnform" args=".25 0 .2 0 0 0 base_link hokuyo_frame 30" />
-</launch>

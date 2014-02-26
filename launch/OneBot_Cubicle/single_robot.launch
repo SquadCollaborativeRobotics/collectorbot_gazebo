@@ -6,7 +6,7 @@
 
   <!-- BEGIN ROBOT 1-->
   <include file="$(find collectorbot_gazebo)/launch/one_robot.launch" >
-    <arg name="init_pose" value="-x 1 -y 1 -z 0.5" />
+    <arg name="init_pose" value="-x 2 -y 0 -z 0.5" />
     <arg name="robot_name"  value="Robot1" />
   </include>
 

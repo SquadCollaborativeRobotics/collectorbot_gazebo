@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="global_planner" type="global_planner_node" name="Global_Planner"/>
+
+  <!-- BEGIN ROBOT 1-->
+  <group ns="robot1">
+    <node pkg="global_planner" type="robot_controller_node" name="Robot1_Controller" />
+  </group>
+
+  <!-- BEGIN ROBOT 2-->
+  <group ns="robot2">
+    <!-- <node pkg="global_planner" type="robot_controller_node" name="Robot2_Controller" /> -->
+  </group>
+</launch>

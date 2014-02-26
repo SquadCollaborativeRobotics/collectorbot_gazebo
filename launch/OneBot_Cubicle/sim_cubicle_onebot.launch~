@@ -1,0 +1,21 @@
+<launch>
+  <param name="/use_sim_time" value="true" />
+
+  <!-- start world -->
+  <node name="gazebo" pkg="gazebo_ros" type="gazebo" 
+   args="$(find collectorbot_gazebo)/worlds/springdemo_cubicle.world" respawn="false" output="screen" />
+
+
+  <!-- Run the map server -->
+  <!-- Room + others -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/cubicles.yaml">
+    <param name="frame_id" value="/map" />
+  </node> 
+
+  <!-- start gui -->
+  <!-- <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> -->
+
+  <!-- include our robots -->
+  <include file="$(find collectorbot_gazebo)/launch/single_robot.launch"/>
+
+</launch>

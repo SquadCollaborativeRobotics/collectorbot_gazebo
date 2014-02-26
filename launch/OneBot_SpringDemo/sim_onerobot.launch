@@ -1,0 +1,18 @@
+<launch>
+  <param name="/use_sim_time" value="true" />
+
+  <!-- start world -->
+  <node name="gazebo" pkg="gazebo_ros" type="gazebo" 
+   args="$(find collectorbot_gazebo)/worlds/springdemo.world" respawn="false" output="screen" />
+
+  <!-- start gui -->
+  <!-- <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> -->
+
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/springdemo.yaml">
+    <!-- <param name="frame_id" value="/map" /> -->
+  </node> 
+
+  <!-- include our robots -->
+  <include file="$(find collectorbot_gazebo)/launch/OneBot_SpringDemo/single_robot.launch"/>
+
+</launch>
