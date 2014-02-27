@@ -5,12 +5,14 @@
   <!-- BEGIN ROBOT 1-->
   <group ns="robot1">
     <param name="tf_prefix" value="robot1_tf" />
+    <arg name="tf_prefix" value="robot1_tf" />
+
+
     <include file="$(find collectorbot_gazebo)/launch/one_robot.launch" >
       <arg name="init_pose" value="-x 1 -y 1 -z 0.5" />
       <arg name="robot_name"  value="Robot1" />
     </include>
 
-    <arg name="tf_prefix" value="robot1_tf" />
     <!-- Static tf transform between robot center to base link -->
     <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.2413 0 0 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/base_link 30" />
     <!-- Static tf transform between robot center to the hokuyo laser -->
@@ -55,15 +57,6 @@
       <param name="odom_model_type" value="diff" />
       <param name="use_map_topic" value="true" />
       <remap from="map" to="/map" />
-    </node>
-
-    <!-- Move Base Handles interactions between Nav Stack and Robot Hardware -->
-    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-      <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/costmap_common_params-collector.yaml" command="load" ns="global_costmap" />
-      <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/costmap_common_params-collector.yaml" command="load" ns="local_costmap" />
-      <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/local_costmap_params.yaml" command="load" />
-      <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/global_costmap_params.yaml" command="load" />
-      <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/base_local_planner_params-collector.yaml" command="load" />
     </node>
   </group>
 
@@ -122,7 +115,7 @@
     </node>
 
 
-    <!-- Move Base Handles interactions between Nav Stack and Robot Hardware -->
+    <!-- Move Base Handles interactions between Nav Stack and Robot Hardware
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
       <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/costmap_common_params-collector.yaml" command="load" ns="global_costmap" />
       <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/costmap_common_params-collector.yaml" command="load" ns="local_costmap" />
@@ -130,5 +123,6 @@
       <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/global_costmap_params.yaml" command="load" />
       <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/base_local_planner_params-collector.yaml" command="load" />
     </node>
+  -->
   </group>
 </launch>
