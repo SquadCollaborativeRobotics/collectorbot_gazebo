@@ -8,7 +8,6 @@
         <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/local_costmap_params.yaml" command="load" />
         <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/global_costmap_params.yaml" command="load" />
         <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/base_local_planner_params-collector.yaml" command="load" />
-        <remap from="map" to="/map" />
       </node>
   </group>
 </launch>
