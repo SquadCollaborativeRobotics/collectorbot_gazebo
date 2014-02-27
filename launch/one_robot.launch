@@ -2,8 +2,8 @@
     <arg name="robot_name"/>
     <arg name="init_pose"/>
 
-     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" 
-        args="$(arg init_pose) -file $(find collectorbot_description)/urdf/collectorbotv2.sdf -sdf -model $(arg robot_name)" 
+     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+        args="$(arg init_pose) -file $(find collectorbot_description)/urdf/collectorbotv2.sdf -sdf -model $(arg robot_name)"
         respawn="false" output="screen" />
 
     <!-- <node pkg="robot_state_publisher" type="robot_state_publisher"  -->
