@@ -16,6 +16,6 @@
   <!-- <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> -->
 
   <!-- include our robots -->
-  <include file="$(find collectorbot_gazebo)/launch/OneBot_Cubicle/single_robot.launch"/>
+  <include file="$(find collectorbot_gazebo)/launch/OneBot_Cubicle/onebot_cubicle.launch"/>
 
 </launch>
