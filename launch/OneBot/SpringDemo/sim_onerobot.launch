@@ -13,6 +13,6 @@
   </node> 
 
   <!-- include our robots -->
-  <include file="$(find collectorbot_gazebo)/launch/OneBot_SpringDemo/single_robot.launch"/>
+  <include file="$(find collectorbot_gazebo)/launch/OneBot/SpringDemo/single_robot.launch"/>
 
 </launch>
