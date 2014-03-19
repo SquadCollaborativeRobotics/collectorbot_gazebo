@@ -71,7 +71,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: 0
+      Min Intensity: -6.98581e-06
       Name: R1_Scan
       Position Transformer: XYZ
       Queue Size: 10
@@ -100,7 +100,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: -7.11955e-06
+      Min Intensity: 0
       Name: R2_Scan
       Position Transformer: XYZ
       Queue Size: 10
@@ -289,11 +289,11 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 19.9715
+      Distance: 22.6335
       Focal Point:
-        X: -3.53511
-        Y: 0.504271
-        Z: -3.12906
+        X: 0.10609
+        Y: -0.213963
+        Z: -3.66817
       Name: Current View
       Near Clip Distance: 0.01
       Pitch: 1.0148
