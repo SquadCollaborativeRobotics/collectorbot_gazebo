@@ -24,6 +24,8 @@
   <include file="$(find collectorbot_gazebo)/launch/TwoBots/twobots_move_base.launch"/>
 
   <!-- Run rviz  -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find collectorbot_gazebo)/rviz_config/twobots.rviz"/>
+  <group if="$(arg rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find collectorbot_gazebo)/rviz_config/twobots.rviz"/>
+  </group>
 
 </launch>
