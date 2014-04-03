@@ -1,0 +1,13 @@
+# To Run A Sim
+roslaunch collectorbot_gazebo twobots_cubicle_sim.launch
+# This starts gzserver (for viz change to gazebo, or launch gzclient seperately),
+# spawns 2 namespaced robots, amcl, and movebase for two robots.
+
+# launch rviz if needed
+rosrun rviz rviz -d <RVIZ_CONFIG_FILE>
+
+# Then launch the global planner
+roslaunch global_planner global_planner.launch
+
+# And to start the global planner
+rostopic pub /toggle_planner std_msgs/Empty "{}"

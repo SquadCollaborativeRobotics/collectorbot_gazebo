@@ -15,7 +15,7 @@
   <!-- start gui -->
   <!-- <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> -->
 
-  <!-- include our robots -->
-  <include file="$(find collectorbot_gazebo)/launch/OneBot_Cubicle/single_robot.launch"/>
+  <!-- include our namespaced robot -->
+  <include file="$(find collectorbot_gazebo)/launch/OneBot/Cubicle/onebot_robot.launch"/>
 
 </launch>
