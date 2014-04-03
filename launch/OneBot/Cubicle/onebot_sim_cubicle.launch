@@ -2,7 +2,7 @@
   <param name="/use_sim_time" value="true" />
 
   <!-- start world -->
-  <node name="gazebo" pkg="gazebo_ros" type="gazebo" 
+  <node name="gazebo" pkg="gazebo_ros" type="gazebo"
    args="$(find collectorbot_gazebo)/worlds/springdemo_cubicle.world" respawn="false" output="screen" />
 
 
@@ -10,12 +10,12 @@
   <!-- Room + others -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(find collectorbot_gazebo)/maps/cubicles.yaml">
     <param name="frame_id" value="/map" />
-  </node> 
+  </node>
 
   <!-- start gui -->
   <!-- <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> -->
 
   <!-- include our namespaced robot -->
-  <include file="$(find collectorbot_gazebo)/launch/OneBot/Cubicle/onebot_robot.launch"/>
+  <include file="$(find collectorbot_gazebo)/launch/OneBot/onebot_robot.launch"/>
 
 </launch>
