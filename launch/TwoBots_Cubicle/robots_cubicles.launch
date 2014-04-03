@@ -1,5 +1,5 @@
 <launch>
-  <!-- No namespace here as we will share this description. 
+  <!-- No namespace here as we will share this description.
        Access with slash at the beginning -->
   <param name="robot_description"
     command="$(find xacro)/xacro.py $(find collectorbot_description)/urdf/collectorbot.xacro" />
@@ -16,7 +16,8 @@
     <!-- Static tf transform between robot center to base link -->
     <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.1413 0 0 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/base_link 30" />
     <!-- Static tf transform between robot center to the hokuyo laser -->
-    <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".15 0 .2 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/hokuyo_frame 30" />
+    <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/hokuyo_frame 30" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_transform" args=".235 0 .145 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/camera_link 30" />
 
     <!-- - Run AMCL  -->
     <!-- <node pkg="amcl" type="amcl" name="amcl" output="screen"> -->
@@ -43,7 +44,8 @@
     <!-- Static tf transform between robot center to base link -->
     <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.1413 0 0 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/base_link 30" />
     <!-- Static tf transform between robot center to the hokuyo laser -->
-    <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".15 0 .2 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/hokuyo_frame 30" />
+    <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/hokuyo_frame 30" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_transform" args=".235 0 .145 0 0 0 $(arg tf_prefix)/robot_center $(arg tf_prefix)/camera_link 30" />
 
   </group>
 </launch>

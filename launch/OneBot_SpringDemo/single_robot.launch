@@ -1,5 +1,5 @@
 <launch>
-  <!-- No namespace here as we will share this description. 
+  <!-- No namespace here as we will share this description.
        Access with slash at the beginning -->
   <param name="robot_description"
     command="$(find xacro)/xacro.py $(find collectorbot_description)/urdf/collectorbot.xacro" />
@@ -16,6 +16,9 @@
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_center" args="0.2413 0 0 0 0 0 robot_center base_link 30" />
   <!-- Static tf transform between robot center to the hokuyo laser -->
   <node pkg="tf" type="static_transform_publisher" name="hokuyo_transform" args=".25 0 .2 0 0 0 robot_center hokuyo_frame 30" />
+  <!-- Camera TF -->
+  <node pkg="tf" type="static_transform_publisher" name="camera_transform" args=".235 0 .145 0 0 0 robot_center camera_link 30" />
+
 
   <param name="amcl/initial_pose_x" value="1" />
   <param name="amcl/initial_pose_y" value="1" />
