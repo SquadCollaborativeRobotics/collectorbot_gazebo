@@ -12,10 +12,6 @@
     <param name="frame_id" value="/map" />
   </node>
 
-  <!-- start gui -->
-  <!-- <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/> -->
-
   <!-- include our namespaced robot -->
   <include file="$(find collectorbot_gazebo)/launch/OneBot/onebot_robot.launch"/>
-
 </launch>

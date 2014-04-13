@@ -1,7 +1,7 @@
 
 <launch>
   <!-- Move Base Handles interactions between Nav Stack and Robot Hardware -->
-  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="log">
     <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/namespaced/costmap_common_params-collector.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/namespaced/costmap_common_params-collector.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find collectorbot_gazebo)/navstack_cfg/namespaced/local_costmap_params.yaml" command="load" />

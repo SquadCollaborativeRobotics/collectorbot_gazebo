@@ -20,8 +20,8 @@
   <!-- Static tf transform between base link and the camera -->
   <node pkg="tf" type="static_transform_publisher" name="camera_transform" args="0.235000 0 0.145000 0 0 0 base_link camera_link 30" />
 
-  <param name="amcl/initial_pose_x" value="1" />
-  <param name="amcl/initial_pose_y" value="1" />
+  <param name="amcl/initial_pose_x" value="2" />
+  <param name="amcl/initial_pose_y" value="0" />
   <!-- - Run AMCL  -->
   <node pkg="amcl" type="amcl" name="amcl" output="screen">
     <!-- Almost all of the commented out values have the default value of what's shown -->
