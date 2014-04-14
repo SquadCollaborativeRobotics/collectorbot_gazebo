@@ -71,7 +71,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: 0
+      Min Intensity: -6.75447e-06
       Name: R1_Scan
       Position Transformer: XYZ
       Queue Size: 10
@@ -100,7 +100,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: -6.82525e-06
+      Min Intensity: -6.75447e-06
       Name: R2_Scan
       Position Transformer: XYZ
       Queue Size: 10
@@ -268,10 +268,10 @@ Visualization Manager:
     - Arrow Length: 0.3
       Class: rviz/PoseArray
       Color: 255; 25; 0
-      Enabled: true
+      Enabled: false
       Name: R2_AMCL_Guess
       Topic: /robot2/particlecloud
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -346,5 +346,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1535
-  X: 65
+  X: 58
   Y: 24
