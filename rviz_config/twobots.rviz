@@ -71,7 +71,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: -6.98581e-06
+      Min Intensity: 0
       Name: R1_Scan
       Position Transformer: XYZ
       Queue Size: 10
@@ -100,7 +100,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: 0
+      Min Intensity: -6.82525e-06
       Name: R2_Scan
       Position Transformer: XYZ
       Queue Size: 10
@@ -164,13 +164,6 @@ Visualization Manager:
                 {}
       Update Interval: 0
       Value: true
-    - Arrow Length: 0.3
-      Class: rviz/PoseArray
-      Color: 171; 155; 96
-      Enabled: false
-      Name: R1_AMCL_Guess
-      Topic: /robot1/particlecloud
-      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
@@ -265,6 +258,20 @@ Visualization Manager:
       Name: R2_Local
       Topic: /robot2/move_base/local_costmap/costmap
       Value: true
+    - Arrow Length: 0.3
+      Class: rviz/PoseArray
+      Color: 171; 155; 96
+      Enabled: false
+      Name: R1_AMCL_Guess
+      Topic: /robot1/particlecloud
+      Value: false
+    - Arrow Length: 0.3
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: true
+      Name: R2_AMCL_Guess
+      Topic: /robot2/particlecloud
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -289,20 +296,30 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 22.6335
+      Distance: 21.4952
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
       Focal Point:
         X: 0.10609
         Y: -0.213963
         Z: -3.66817
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 1.0148
+      Pitch: 1.0798
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.75359
+      Yaw: 4.84859
     Saved:
       - Class: rviz/Orbit
         Distance: 10
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.06
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
         Focal Point:
           X: 0
           Y: 0
@@ -329,5 +346,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1535
-  X: 58
+  X: 65
   Y: 24
