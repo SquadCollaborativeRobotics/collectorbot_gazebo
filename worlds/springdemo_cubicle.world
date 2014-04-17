@@ -30,8 +30,8 @@
     <!-- Lights that are used for lighting the april tags -->
     <light name='spotlight_5' type='point'>
       <cast_shadows>1</cast_shadows>
-      <pose>2 0 1 0 0 0</pose>
-      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <pose>2 1 1 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
       <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>20</range>

@@ -33,9 +33,14 @@
     <arg name="show_extras" default="true" />
 
     <group if="$(arg show_extras)">
-        <arg name="hagen_pose" default="-x 2 -y -4 -z 1.0 -Y 1.5707963"/>
+        <arg name="hagen_pose" default="-x 1.01 -y 0 -z 0"/>
         <node name="spawn_hagen" pkg="gazebo_ros" type="spawn_model"
         args="$(arg hagen_pose) -file $(find collectorbot_description)/hagen/model.sdf -sdf -model hagen"
+        respawn="false" />
+
+        <arg name="dolan_pose" default="-x 1.01 -y 2 -z 0" />
+        <node name="spawn_dolan" pkg="gazebo_ros" type="spawn_model"
+        args="$(arg dolan_pose) -file $(find collectorbot_description)/dolan/model.sdf -sdf -model dolan"
         respawn="false" />
     </group>
 </launch>
