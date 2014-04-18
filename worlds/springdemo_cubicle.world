@@ -14,6 +14,60 @@
       <direction>0 0.0 -1.0</direction>
     </light>
     <!-- Lights that are used for lighting the april tags -->
+    <light name='spotlight_0' type='point'>
+      <cast_shadows>1</cast_shadows>
+      <pose>-8 -6.5 1 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>1</constant>
+        <linear>0.1</linear>
+        <quadratic>0.0</quadratic>
+      </attenuation>
+      <direction>-0 0 0</direction>
+    </light><!-- Lights that are used for lighting the april tags -->
+    <light name='spotlight_2' type='point'>
+      <cast_shadows>1</cast_shadows>
+      <pose>-8 -6.5 1 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>1</constant>
+        <linear>0.1</linear>
+        <quadratic>0.0</quadratic>
+      </attenuation>
+      <direction>-0 0 0</direction>
+    </light><!-- Lights that are used for lighting the april tags -->
+    <light name='spotlight_4' type='point'>
+      <cast_shadows>1</cast_shadows>
+      <pose>-4 3 1 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>1</constant>
+        <linear>0.1</linear>
+        <quadratic>0.0</quadratic>
+      </attenuation>
+      <direction>-0 0 0</direction>
+    </light>
+    <!-- Lights that are used for lighting the april tags -->
+    <light name='spotlight_6' type='point'>
+      <cast_shadows>1</cast_shadows>
+      <pose>-2 -2 1 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>1</constant>
+        <linear>.1</linear>
+        <quadratic>0.0</quadratic>
+      </attenuation>
+      <direction>-0 0 0</direction>
+    </light>
+    <!-- Lights that are used for lighting the april tags -->
     <light name='spotlight_3' type='point'>
       <cast_shadows>1</cast_shadows>
       <pose>-8 -2 1 0 0 0</pose>
@@ -37,20 +91,6 @@
         <range>20</range>
         <constant>1</constant>
         <linear>0.1</linear>
-        <quadratic>0.0</quadratic>
-      </attenuation>
-      <direction>-0 0 0</direction>
-    </light>
-    <!-- Lights that are used for lighting the april tags -->
-    <light name='spotlight_6' type='point'>
-      <cast_shadows>1</cast_shadows>
-      <pose>-2 -2 1 0 0 0</pose>
-      <diffuse>0.5 0.5 0.5 1</diffuse>
-      <specular>0.1 0.1 0.1 1</specular>
-      <attenuation>
-        <range>20</range>
-        <constant>1</constant>
-        <linear>.1</linear>
         <quadratic>0.0</quadratic>
       </attenuation>
       <direction>-0 0 0</direction>
