@@ -6,7 +6,7 @@
 
   <!-- BEGIN ROBOT 1-->
   <group ns="robot1">
-    <param name="tf_prefix" value="robot1_tf" />
+    <param name="tf_prefix" value="robot1_tf"/>
     <include file="$(find collectorbot_gazebo)/launch/one_robot.launch" >
       <arg name="init_pose" value="-x 2 -y 0 -z 0.5" />
       <arg name="robot_name"  value="Robot1" />
@@ -27,7 +27,7 @@
     <param name="tf_prefix" value="robot2_tf" />
 
     <include file="$(find collectorbot_gazebo)/launch/one_robot.launch" >
-      <arg name="init_pose" value="-x 2 -y 3 -z 0.5" />
+      <arg name="init_pose" value="-x 5 -y 5 -z 0.5" />
       <arg name="robot_name"  value="Robot2" />
     </include>
 
