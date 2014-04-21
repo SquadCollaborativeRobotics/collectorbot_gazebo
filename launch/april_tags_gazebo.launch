@@ -4,10 +4,10 @@
     <!-- ***************************************************************-->
     <!-- ***************************************************************-->
     <!-- Landmarks -->
-    <arg name="tag_1_pose" default="-x 10.85 -y -2 -z 0.25 -R 1.5707963267948966"/>
+    <arg name="tag_1_pose" default="-x 10.85 -y -2 -z 0.25 -R 3.141592653589793"/>
     <arg name="tag_3_pose" default="-x -9.934087 -y -2.000000 -z 0.25"/>
-    <arg name="tag_5_pose" default="-x 3.9 -y 0.2 -z 0.25 -R 1.5707963267948966"/>
-    <arg name="tag_7_pose" default="-x 6.9 -y 5 -z 0.25 -R 1.5707963267948966"/>
+    <arg name="tag_5_pose" default="-x 3.9 -y 0.2 -z 0.25 -R 3.141592653589793"/>
+    <arg name="tag_7_pose" default="-x 6.9 -y 5 -z 0.25 -R 3.141592653589793"/>
 
     <node name="spawn_tag_1" pkg="gazebo_ros" type="spawn_model"
     args="$(arg tag_1_pose) -file $(find collectorbot_description)/apriltags/april_tag_1/model.sdf -sdf -model AprilTag1"
@@ -36,10 +36,10 @@
     <!-- ***************************************************************-->
     <!-- ***************************************************************-->
     <!-- Goals -->
-    <arg name="tag_0_pose" default="-x -5 -y -6.5 -z 0.25 -R 1.5707963267948966"/>
+    <arg name="tag_0_pose" default="-x -5 -y -6.5 -z 0.25 -R 3.141592653589793"/>
     <arg name="tag_2_pose" default="-x 9 -y 5 -z 0.25 -Y -1.5707963267948966"/>
     <arg name="tag_4_pose" default="-x -4 -y 2.00 -z 0.25   -Y 1.5707963267948966"/>
-    <arg name="tag_6_pose" default="-x -2.2 -y 0 -z 0.25    -Y -1.5707963267948966"/>
+    <arg name="tag_6_pose" default="-x -2 -y 0 -z 0.25    -Y -1.5707963267948966"/>
     <arg name="tag_8_pose" default="-x -2.0 -y -6.0 -z 0.25 -Y 1.5707963267948966"/>
     <arg name="tag_10_pose" default="-x 5 -y -4.0 -z 0.25   -Y 1.5707963267948966"/>
 
