@@ -2,11 +2,11 @@ global_costmap:
   global_frame: /map
   robot_base_frame: robot_center
   update_frequency: 5.0
-  publish_frequency: 0.0
+  publish_frequency: 1.0
 
   # origin_x: -6.4
   # origin_y: -6.4
   static_map: true
   rolling_window: false
 
-  footprint_padding: 0.02
+  footprint_padding: 0.1
